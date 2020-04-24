@@ -1,6 +1,11 @@
 # Getting Started
 
 <!-- GEN:toc -->
+- [Installation](#installation)
+- [Usage](#usage)
+- [Writing your first script](#writing-your-first-script)
+- [Debugging scripts](#debugging-scripts)
+- [Deploying to CI](#deploying-to-ci)
 <!-- GEN:stop -->
 
 ## Installation
