@@ -1,4 +1,14 @@
-# Managing browser binaries
+# Installation
+
+## System requirements
+
+Playwright 
+
+* Windows: Works with Windows and Windows Subsystem for Linux (WSL)
+* macOS: Requires 10.14 or greater
+* Linux: 
+
+## Managing browser binaries
 
 Each version of Playwright needs specific versions of browser binaries to operate.
 
@@ -19,7 +29,7 @@ du -hs ./node_modules/playwright/.local-browsers/*
 
 To mitigate that, Playwright has a rich set of options to control browser management.
 
-## Download from artifact repository
+### Download from artifact repository
 
 By default, Playwright downloads browsers from Microsoft and Google public CDNs.
 
@@ -31,7 +41,7 @@ location using the `PLAYWRIGHT_DOWNLOAD_HOST` env variable.
 $ PLAYWRIGHT_DOWNLOAD_HOST=192.168.1.78 npm i playwright
 ```
 
-## Share browser binaries across projects
+### Share browser binaries across projects
 
 Often times, developers work with multiple NPM projects that all use Playwright.
 By default, every project will have browser binaries in its own `node_modules/` folder.
@@ -54,9 +64,9 @@ $ PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers node playwright-script.js
 
 > **NOTE** Developers can opt-in in this mode via exporting `PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers` in their `.bashrc`.
 
-## Completely avoid browser installation
+### Skip browser downloads
 
-In certain cases, it is desired to avoid browser installation altogether because
+In certain cases, it is desired to avoid browser downloads altogether because
 browser binaries are managed separately.
 
 This can be done by setting `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD` variable before installation.
@@ -86,7 +96,7 @@ $ npm i playwright-webkit
 
 ```js
 // Notice a proper package name in require
-const {webkit} = require('playwright-webkit');
+const { webkit } = require('playwright-webkit');
 
 (async () => {
   const browser = await webkit.launch();
