@@ -6,10 +6,6 @@
 
 Playwright is a Node library to automate [Chromium](https://www.chromium.org/Home), [Firefox](https://www.mozilla.org/en-US/firefox/new/) and [WebKit](https://webkit.org/) with a single API. Playwright is built to enable cross-browser web automation that is **ever-green**, **capable**, **reliable** and **fast**.
 
-Playwright is a cross-browser automation driver for end-to-end testing. Playwright provides an API to launch web browsers, navigate to web pages and manipulate page contents in JavaScript.
-
-The Playwright API is cross-browser: it works across **Chromium** (used in Chrome, Edge, and many other browsers), **Firefox** and **WebKit** (used in Safari) engines.
-
 |          | Linux | macOS | Windows |
 |   :---   | :---: | :---: | :---:   |
 | Chromium <!-- GEN:chromium-version -->84.0.4125.0<!-- GEN:stop --> | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -24,17 +20,17 @@ Headless execution is supported for all the browsers on all platforms.
 npm i playwright
 ```
 
-This installs Playwright and the 3 browser binaries. To customize this, read [the installation guide](docs/intro.md). Once installed, Playwright can be used to create a browser instance, open pages and then automate interactions.
+This installs Playwright and browser binaries for Chromium, Firefox and WebKit. Once installed, you can `require` Playwright in a Node.js script and automate web browser interactions.
 
-* [Documentation](docs/README.md)
+* [Getting started](docs/intro.md)
+* [Installation configuration](docs/installation.md).
 * [API reference](docs/api.md)
-
-Playwright is free and open source. Playwright is modular, and works with any JavaScript test runner framework.
 
 ## Capabilities
 
-Playwright can run automation scenarios that span multiple tabs, domains and iframes. More specifically, Playwright can:
+Playwright is built to automate the broad and growing set of web browser capabilities used by Single Page Apps and Progressive Web Apps.
 
+* Scenarios that span multiple page, domains and iframes
 * Auto-wait for elements to be ready before executing actions (like click, fill)
 * Intercept network activity for stubbing and mocking network requests
 * Emulate mobile devices, geolocation, permissions

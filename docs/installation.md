@@ -1,12 +1,25 @@
 # Installation
 
+<!-- GEN:toc -->
+- [System requirements](#system-requirements)
+- [Managing browser binaries](#managing-browser-binaries)
+  * [Download from artifact repository](#download-from-artifact-repository)
+  * [Share browser binaries across projects](#share-browser-binaries-across-projects)
+  * [Skip browser downloads](#skip-browser-downloads)
+- [Download single browser binary](#download-single-browser-binary)
+<!-- GEN:stop -->
+
 ## System requirements
 
-Playwright 
+Playwright requires Node.js version 10.15 or above. The browser binaries for Chromium,
+Firefox and WebKit work across the 3 platforms (Windows, macOS, Linux):
 
-* Windows: Works with Windows and Windows Subsystem for Linux (WSL)
-* macOS: Requires 10.14 or greater
-* Linux: 
+* **Windows**: Works with Windows and Windows Subsystem for Linux (WSL).
+* **macOS**: Requires 10.14 or above.
+* **Linux**: Depending on your Linux distribution, you might need to install additional
+  dependencies to run the browsers.
+  * For Ubuntu 18.04, the additional dependencies are defined in [our Docker image](docker/Dockerfile.bionic),
+    which is based on Ubuntu.
 
 ## Managing browser binaries
 
